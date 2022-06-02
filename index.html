@@ -5,4 +5,24 @@
 <body>
 <h1>hello this is shubham</h1>
 </body>
+<script>
+
+  const api_url = 
+      "https://fetchrss.com/rss/6298422ef5031278c7749122629841fa4494990172587f72.xml";
+  
+// Defining async function
+async function getapi(url) {
+    
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    
+    //show(data);
+}
+// Calling that async function
+getapi(api_url);
+</script>
 </html>
